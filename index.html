@@ -4,9 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- Meta -->
+  <title>Nina Carducci – Photographe</title>
+  <meta name="description" content="Photographer in Paris : portraits, mariages, concerts, entreprises. Portfolio, tarifs et contact.">
+
+<!-- critical -->
+  <style>
+  html,body{margin:0}
+  .top-header{position:sticky;top:0;z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:30px 100px;background:#fff}
+  .top-header .name{font-size:26px}
+  .top-header .nav ul{display:flex;list-style:none;margin:0;padding:0}
+  .top-header .nav li{padding:0 10px}
+  .top-header .nav a{text-decoration:none;color:#000}
+  #header{overflow:hidden}
+  #carouselExampleIndicators{position:relative}
+  #carouselExampleIndicators .carousel-item { aspect-ratio: 16 / 9; overflow: hidden; max-height: 80vh; }
+  #carouselExampleIndicators .carousel-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;}
+</style>
+
   <!-- CSS info -->
-  <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="./assets/style.css">
+ <link rel="preload" as="style" href="./assets/bootstrap/bootstrap.css"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./assets/bootstrap/bootstrap.css"></noscript>
+
+<link rel="preload" as="style" href="./assets/style.css"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./assets/style.css"></noscript>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,9 +50,15 @@
   <script src="./assets/maugallery.js" defer></script>
   <script src="./assets/scripts.js" defer></script>
 
-  <!-- Meta -->
-  <title>Nina Carducci – Photographe</title>
-  <meta name="description" content="Photographer in Paris : portraits, mariages, concerts, entreprises. Portfolio, tarifs et contact.">
+  <!-- preload hero image -->
+  <link rel="preload"
+        as="image"
+        href="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg"
+        imagesrcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.avif 1920w,
+                     ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp 1920w,
+                     ./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg 1920w"
+        imagesizes="100vw">
+
 </head>
 <body>
 <div class="top-header">
@@ -46,23 +75,50 @@
 </div>
 <div id="header">
 
-	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+	<div id="carouselExampleIndicators" class="carousel slide">
 		<div class="carousel-indicators">
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 		</div>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.jpg" class="d-block w-100" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img src="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.jpg" class="d-block w-100" alt="...">
-			</div>
-		</div>
+	<div class="carousel-inner">
+  <div class="carousel-item active">
+    <picture>
+      <source srcset="./assets/images/slider/ryoji-iwata-small.webp" type="image/webp">
+      <img
+        src="./assets/images/slider/ryoji-iwata-small.jpg"
+        class="d-block w-100"
+        alt="Man crossing a city street at a pedestrian crossing"
+        fetchpriority="high"
+        decoding="async"
+        width="1280" height="720">
+    </picture>
+  </div>
+  <div class="carousel-item">
+    <picture>
+      <source srcset="./assets/images/slider/nicholas-green-small.webp" type="image/webp">
+      <img
+        src="./assets/images/slider/nicholas-green-small.jpg"
+        class="d-block w-100"
+        alt="Crowd enjoying a live concert under stage lights"
+        loading="lazy"
+        decoding="async"
+        width="1280" height="720">
+    </picture>
+  </div>
+  <div class="carousel-item">
+    <picture>
+      <source srcset="./assets/images/slider/edward-cisneros-small.webp" type="image/webp">
+      <img
+        src="./assets/images/slider/edward-cisneros-small.jpg"
+        class="d-block w-100"
+        alt="Bride and groom sharing their first dance at a wedding"
+        loading="lazy"
+        decoding="async"
+        width="1280" height="720">
+    </picture>
+  </div>
+</div>
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Previous</span>
@@ -75,8 +131,18 @@
 </div>
 <div id="about">
 	<div class="picture left">
-		<img src="./assets/images/nina.png">
-	</div>
+  <picture>
+    <source srcset="./assets/images/nina-600.webp" type="image/webp">
+    <img
+      src="./assets/images/nina-600.jpg"
+      alt="Portrait of photographer Nina Carducci standing outdoors"
+      loading="lazy"
+      decoding="async"
+      width="600"
+      height="600"
+      style="width: 100%; height: auto; object-fit: cover; display: block; border-radius: 2px;">
+  </picture>
+</div>
 	<div id="about-me">
 		<h3 class="about-me__title">A propos de moi</h3>
 		<h6 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h6>
@@ -88,15 +154,33 @@
 	<h3 class="title">Portfolio</h3>
 	<div class="container py-3">
 		<div class="gallery" style="display: none">
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg"/>
-			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"/>
-			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg"/>
-			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"/>
-			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"/>
+			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.jpg" 
+			alt="Singer performing on stage with blue lighting"
+       		loading="lazy" decoding="async" width="800" height="800"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.jpg"
+			alt="Confident businessman in suit standing outdoors"
+       		loading="lazy" decoding="async" width="800" height="800"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.jpg"
+			alt="Team meeting in a modern office, people collaborating"
+       		loading="lazy" decoding="async" width="800" height="800"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.jpg"
+			alt="Close-up of two people holding hands during a wedding"
+       		loading="lazy" decoding="async" width="800" height="800"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.jpg"
+			alt="Portrait of a man with eyes closed in sunlight and shadow"
+       		loading="lazy" decoding="async" width="800" height="800"/>
+			<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.jpg"
+			alt="Bride walking outdoors in wedding dress, smiling"
+       		loading="lazy" decoding="async" width="800" height="800"/>
+			<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.jpg"
+			alt="Portrait of a woman looking to the side against a neutral background"
+       		loading="lazy" decoding="async" width="800" height="800"/>
+			<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.jpg"
+			alt="Guitarist on stage with dramatic lighting during a concert"
+       		loading="lazy" decoding="async" width="800" height="800"/>
+			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.jpg"
+			alt="Designer working on a laptop in a bright office"
+       		loading="lazy" decoding="async" width="800" height="800"/>
 		</div>
 	</div>
 	<div class="quote">

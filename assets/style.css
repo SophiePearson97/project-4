@@ -42,6 +42,13 @@ body {
 	width: 20px;
 }
 
+.skip-link {
+  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus {
+  position:static; width:auto; height:auto; padding:8px 12px; background:#000; color:#fff; z-index:10000;
+}
+
 #about {
 	display: flex;
 	background-color: #F6D2B8;

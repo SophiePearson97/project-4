@@ -104,9 +104,11 @@
         <li><a href="#services">Service</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
-          <a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" rel="noopener">
-            <img src="assets/images/instagram.png" alt="" width="20" height="20">
-          </a>
+          <a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
+     		target="_blank" rel="noopener"
+     		aria-label="Suivez Nina Carducci sur Instagram">
+    		<img src="assets/images/instagram.png" alt="Instagram" width="20" height="20">
+ 		 </a>
         </li>
       </ul>
     </div>
@@ -186,7 +188,7 @@
     </div>
 
     <div id="about-me">
-      <h3 class="about-me__title">A propos de moi</h3>
+      <h2 class="about-me__title">A propos de moi</h2>
       <h6 class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</h6>
       <p>Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
         C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
@@ -317,14 +319,14 @@
         <h3>Une question ? Une demande de devis ?</h3>
         <p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
         <form action="" method="post">
-          <label>Nom</label>
-          <input type="text" name="nom" id="nom" autocomplete="name" required>
-          <label>Email</label>
-          <input type="email" name="email" id="email" autocomplete="email" required>
-          <label>Message</label>
-          <textarea name="message" id="message" cols="30" rows="10"></textarea>
-          <input type="submit" value="Envoyer"/>
-        </form>
+          <label for="nom">Nom</label>
+  		  <input type="text" name="nom" id="nom" autocomplete="name" required>
+          <label for="email">Email</label>
+  	 	  <input type="email" name="email" id="email" autocomplete="email" required>
+          <label for="message">Message</label>
+  		  <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+          <input type="submit" value="Envoyer" aria-label="Envoyer le formulaire de contact">
+		</form>
       </div>
 
       <div class="picture right">

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,73 +8,54 @@
   <title>Nina Carducci – Photographe</title>
   <meta name="description" content="Photographe à Bordeaux : portraits, mariages, concerts, entreprises. Portfolio, tarifs et contact.">
 
-  <!-- Preconnects for fonts (HTTPS only) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link rel="preload"
-      href="./assets/fonts/inter/Inter-VariableFont_opsz,wght.woff2"
-      as="font" type="font/woff2" crossorigin>
-
-  <link rel="preload"
-      href="./assets/fonts/spectral/Spectral-Regular.woff2"
-      as="font" type="font/woff2" crossorigin>
-
+  <!-- Favicon (no network request) -->
   <link rel="icon" href="data:,">
 
-  <!-- Your CSS (local) -->
+  <!-- CSS -->
   <link rel="stylesheet" href="./assets/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="./assets/style.css">
 
-  <!-- jQuery -->
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-<script src="./assets/bootstrap/bootstrap.bundle.js"></script>
-<script src="./assets/maugallery.js"></script>
-<script src="./assets/scripts.js"></script>
+  <!-- jQuery (required by MauGallery) -->
+  <script defer
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
 
+  <!-- JS: Bootstrap bundle (no jQuery dependency), MauGallery, your init -->
+  <script defer src="./assets/bootstrap/bootstrap.bundle.js"></script>
+  <script defer src="./assets/maugallery.js"></script>
+  <script defer src="./assets/scripts.js"></script>
 
- <!-- Schema Local SEO-->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "additionalType": "https://schema.org/ProfessionalService",
-  "name": "Nina Carducci – Photographe",
-  "url": "https://openclassrooms-student-center.github.io/Nina-Carducci-Dev/",
-  "image": "https://openclassrooms-student-center.github.io/Nina-Carducci-Dev/assets/images/slider/ryoji-iwata-small.jpg",
-  "description": "Photographe à Bordeaux : portraits, mariages, concerts, entreprises. Portfolio, tarifs et contact.",
-  "telephone": "+33 5 56 67 78 89",
-  "priceRange": "€€",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "68 avenue Alsace-Lorraine",
-    "postalCode": "33200",
-    "addressLocality": "Bordeaux",
-    "addressCountry": "FR"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Bordeaux"
-  },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday","Tuesday","Wednesday","Thursday","Friday"
-    ],
-    "opens": "10:00",
-    "closes": "19:00"
-  }],
-  "sameAs": [
-    "https://www.instagram.com/ninacarducci.photo/?hl=fr"
-  ],
-  "knowsAbout": [
-    "portrait photography", "wedding photography", "concert photography", "corporate photography"
-  ]
-}
-</script>
+  <!-- LocalBusiness schema (unchanged) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "additionalType": "https://schema.org/ProfessionalService",
+    "name": "Nina Carducci – Photographe",
+    "url": "https://openclassrooms-student-center.github.io/Nina-Carducci-Dev/",
+    "image": "https://openclassrooms-student-center.github.io/Nina-Carducci-Dev/assets/images/slider/ryoji-iwata-small.jpg",
+    "description": "Photographe à Bordeaux : portraits, mariages, concerts, entreprises. Portfolio, tarifs et contact.",
+    "telephone": "+33 5 56 67 78 89",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "68 avenue Alsace-Lorraine",
+      "postalCode": "33200",
+      "addressLocality": "Bordeaux",
+      "addressCountry": "FR"
+    },
+    "areaServed": {"@type": "City","name": "Bordeaux"},
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "10:00",
+      "closes": "19:00"
+    }],
+    "sameAs": ["https://www.instagram.com/ninacarducci.photo/?hl=fr"],
+    "knowsAbout": ["portrait photography","wedding photography","concert photography","corporate photography"]
+  }
+  </script>
 </head>
 
 <body>
